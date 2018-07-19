@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_calculate_bmi">
+    tools:context="com.example.mcda5550.bmiapp.activity_calculate_bmi">
 
     <TableLayout
         android:layout_width="match_parent"
@@ -13,6 +13,12 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/heightLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Height (m)" />
 
             <EditText
                 android:id="@+id/heightTextField"
@@ -26,6 +32,12 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/weightLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weight (m)" />
 
             <EditText
                 android:id="@+id/weightTextField"
@@ -53,6 +65,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
 
+            <TextView
+                android:id="@+id/bmiLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Body Mass Index" />
+
             <EditText
                 android:id="@+id/resultTextField"
                 android:layout_width="wrap_content"
@@ -64,6 +82,14 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/historyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onHistoryClick"
+                android:text="Show History" />
+        </TableRow>
     </TableLayout>
 </android.support.constraint.ConstraintLayout>
