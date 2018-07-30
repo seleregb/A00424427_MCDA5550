@@ -1,18 +1,18 @@
 package com.example.mcda5550.bmiapp;
 
-public class Person {
+public class User {
 
     public int id;
     public String name;
     public String healthCardNumber;
     public String password;
-    public int dateOfBirth;
+    public long dateOfBirth;
 
     public int getId() {
         return id;
     }
 
-    public int getDateOfBirth() {
+    public long getDateOfBirth() {
         return dateOfBirth;
     }
 
@@ -48,7 +48,7 @@ public class Person {
         this.password = password;
     }
 
-    public Person(int id, String name, String healthCardNumber, String password, int dateOfBirth) {
+    public User(int id, String name, String healthCardNumber, String password, int dateOfBirth) {
         this.id = id;
         this.name = name;
         this.healthCardNumber = healthCardNumber;
@@ -56,7 +56,7 @@ public class Person {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public Person() {
+    public User() {
 
     }
 }

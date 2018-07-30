@@ -3,11 +3,13 @@ package com.example.mcda5550.bmiapp;
 public class BMIResult {
     private double height = 1;
     private double weight = 1;
-    private int date = 1;
+    private double bmi = 1;
+    private long date = 1;
 
-    public BMIResult(double height, double weight) {
+    public BMIResult(double height, double weight, double bmi) {
         this.height = height;
         this.weight = weight;
+        this.bmi = bmi;
     }
 
     public double getHeight() {
@@ -18,11 +20,15 @@ public class BMIResult {
         return weight;
     }
 
-    public int getDate() {
+    public long getDate() {
         return date;
     }
 
-    public void setDate(int date) {
+    public double getBmi() {
+        return bmi;
+    }
+
+    public void setDate(long date) {
         this.date = date;
     }
 
@@ -44,5 +50,9 @@ public class BMIResult {
 
     public BMIResult() {
 
+    }
+
+    public void setBMI(double bmi) {
+        this.bmi = bmi;
     }
 }

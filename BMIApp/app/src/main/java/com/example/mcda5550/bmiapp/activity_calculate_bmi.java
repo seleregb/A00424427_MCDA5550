@@ -20,7 +20,8 @@ public class activity_calculate_bmi extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculate_bmi);
 
-        currentUserId = Integer.parseInt(getIntent().getStringExtra("current_user"));
+        Bundle b = getIntent().getExtras();
+        currentUserId = b.getInt("current_user");
 
         // instantiate the db helper class
         dbHelper = new InClassDatabaseHelper(this);
@@ -59,6 +60,10 @@ public class activity_calculate_bmi extends AppCompatActivity {
 
     public void onHistoryClick(View view) {
         Intent intent = new Intent(this, activity_bmi_list.class);
+
+        Bundle b = new Bundle();
+        b.putInt("current_user", currentUserId);
+        intent.putExtras(b);
         startActivity(intent);
     }
 

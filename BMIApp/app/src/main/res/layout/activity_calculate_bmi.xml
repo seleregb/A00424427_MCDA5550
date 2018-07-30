@@ -4,92 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.mcda5550.bmiapp.activity_calculate_bmi">
 
-    <TableLayout
+    <ScrollView
+        android:id="@+id/bmi_form"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TableRow
+        <LinearLayout
+            android:id="@+id/bmi_calculate_form"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TextView
-                android:id="@+id/heightLabel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Height (m)" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <EditText
                 android:id="@+id/heightTextField"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="numberDecimal"
-                tools:text="Height" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TextView
-                android:id="@+id/weightLabel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Weight (m)" />
+                android:hint="@string/prompt_height_m" />
 
             <EditText
                 android:id="@+id/weightTextField"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="numberDecimal"
-                tools:text="Weight" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+                android:hint="@string/prompt_weight_kg" />
 
             <Button
                 android:id="@+id/calculateButton"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="onCalculateClick"
-                android:text="Calculate" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TextView
-                android:id="@+id/bmiLabel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Body Mass Index" />
+                android:text="@string/action_calculate_bmi" />
 
             <EditText
                 android:id="@+id/resultTextField"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="numberDecimal"
-                tools:text="Result" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                android:hint="@string/result" />
 
             <Button
                 android:id="@+id/historyButton"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="onHistoryClick"
-                android:text="Show History" />
-        </TableRow>
-    </TableLayout>
+                android:text="@string/action_show_bmi_history" />
+        </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>
